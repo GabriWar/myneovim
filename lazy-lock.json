@@ -1,5 +1,5 @@
 {
-  "CopilotChat.nvim": { "branch": "canary", "commit": "51375b1cac3b7d002bd32ec44069aa9ef7fb6ee9" },
+  "CopilotChat.nvim": { "branch": "canary", "commit": "82923efe22b604cf9c0cad0bb2a74aa9247755ab" },
   "LazyVim": { "branch": "main", "commit": "e7430b0776c13e9ab3f42a1b9aee84561bd07c0a" },
   "SchemaStore.nvim": { "branch": "main", "commit": "931f9f3b7b60ec976159cb01b4a40da3829ac2fd" },
   "bufferline.nvim": { "branch": "main", "commit": "99337f63f0a3c3ab9519f3d1da7618ca4f91cffe" },
@@ -12,6 +12,7 @@
   "copilot.lua": { "branch": "master", "commit": "f7612f5af4a7d7615babf43ab1e67a2d790c13a6" },
   "dashboard-nvim": { "branch": "master", "commit": "b5a2a4269babbcc23c2d50a859516199841714b9" },
   "dressing.nvim": { "branch": "master", "commit": "3c38ac861e1b8d4077ff46a779cde17330b29f3a" },
+  "edgy.nvim": { "branch": "main", "commit": "de79b7d92a5979cd71a9a1d8b6282515345e5055" },
   "flash.nvim": { "branch": "main", "commit": "11a2e667d19d8f48c93c6ed2e2e525ac6b1b79be" },
   "friendly-snippets": { "branch": "main", "commit": "d0610077b6129cf9f7f78afbe3a1425d60f6e2f1" },
   "gitsigns.nvim": { "branch": "main", "commit": "75dc649106827183547d3bedd4602442340d2f7f" },
