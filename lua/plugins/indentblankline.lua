@@ -2,8 +2,9 @@ return {
   "lukas-reineke/indent-blankline.nvim",
   event = "LazyFile",
   opts = {
-
-    scope = { show_start = true, show_end = true },
+    indent = {
+      char = "│",
+    },
     exclude = {
       filetypes = {
         "help",
