@@ -15,12 +15,15 @@ return {
 
     local animate = require("mini.animate")
     return {
-      cursor = { path = animate.gen_path.spiral() },
+      cursor = {
+        path = animate.gen_path.spiral(),
+        timing = animate.gen_timing.linear({ duration = 400, unit = "total" }),
+      },
       resize = {
-        timing = animate.gen_timing.linear({ duration = 50, unit = "total" }),
+        timing = animate.gen_timing.linear({ duration = 400, unit = "total" }),
       },
       scroll = {
-        timing = animate.gen_timing.linear({ duration = 150, unit = "total" }),
+        timing = animate.gen_timing.linear({ duration = 400, unit = "total" }),
         subscroll = animate.gen_subscroll.equal({
           predicate = function(total_scroll)
             if mouse_scrolled then
@@ -30,6 +33,12 @@ return {
             return total_scroll > 1
           end,
         }),
+      },
+      open = {
+        timing = animate.gen_timing.linear({ duration = 400, unit = "total" }),
+      },
+      close = {
+        timing = animate.gen_timing.linear({ duration = 400, unit = "total" }),
       },
     }
   end,
