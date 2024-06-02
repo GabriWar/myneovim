@@ -93,7 +93,7 @@ return {
       right = {
         {
           ft = "Outline",
-
+          size = { height = 0.4 },
           title = "Outline",
           pinned = true,
           open = "Outline",
