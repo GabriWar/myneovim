@@ -5,5 +5,11 @@ vim.api.nvim_set_keymap(
   "n",
   "<leader>wp",
   "<cmd>lua require('nvim-window').pick()<CR>",
-  { noremap = true, silent = true, desc = "Pick window" }
+  { noremap = true, silent = true, desc = "Pick a window" }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>ur",
+  "<cmd>lua require('precognition').toggle()<CR>",
+  { noremap = true, silent = true, desc = "Toggle precognition" }
 )
