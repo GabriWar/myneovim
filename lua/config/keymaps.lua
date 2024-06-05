@@ -13,3 +13,9 @@ vim.api.nvim_set_keymap(
   "<cmd>lua require('precognition').toggle()<CR>",
   { noremap = true, silent = true, desc = "Toggle precognition" }
 )
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>si",
+  "<cmd>TSInstallInfo<CR>",
+  { noremap = true, silent = true, desc = "TreeSitter Info (use TSInstall)" }
+)

@@ -5,13 +5,12 @@ return {
     local animate = require("mini.animate")
     return {
       cursor = {
-        enable = true,
-        path = animate.gen_path.spiral(),
-        timing = animate.gen_timing.linear({ duration = 400, unit = "total" }),
+        enable = false,
+        --       path = animate.gen_path.spiral(),
+        --        timing = animate.gen_timing.linear({ duration = 400, unit = "total" }),
       },
       resize = {
         enable = true,
-        timing = animate.gen_timing.linear({ duration = 400, unit = "total" }),
       },
       scroll = {
         enable = false,
@@ -19,11 +18,9 @@ return {
       },
       open = {
         enable = true,
-        timing = animate.gen_timing.linear({ duration = 400, unit = "total" }),
       },
       close = {
         enable = true,
-        timing = animate.gen_timing.linear({ duration = 400, unit = "total" }),
       },
     }
   end,

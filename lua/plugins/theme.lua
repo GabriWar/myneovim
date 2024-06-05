@@ -58,3 +58,14 @@ return { "rebelot/kanagawa.nvim", {
     colorscheme = "kanagawa-dragon",
   },
 } }
+
+--return {
+--  "bluz71/vim-moonfly-colors",
+--  name = "moonfly",
+--  {
+--    "LazyVim/LazyVim",
+--    opts = {
+--      colorscheme = "moonfly",
+--    },
+--  },
+--}}
