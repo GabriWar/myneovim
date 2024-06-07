@@ -9,5 +9,6 @@
 -- the configuration below.
 
 return {
+  enabled = false,
   "antonk52/bad-practices.nvim",
 }
