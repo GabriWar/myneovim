@@ -19,3 +19,9 @@ vim.api.nvim_set_keymap(
   "<cmd>TSInstallInfo<CR>",
   { noremap = true, silent = true, desc = "TreeSitter Info (use TSInstall)" }
 )
+vim.api.nvim_set_keymap(
+  'n',
+  '<leader>srr',
+  '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>',
+  { noremap = true, silent = true, desc = "Search on current file" }
+)
