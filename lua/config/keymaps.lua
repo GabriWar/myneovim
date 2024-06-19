@@ -25,18 +25,6 @@ vim.api.nvim_set_keymap(
   '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>',
   { noremap = true, silent = true, desc = "Search on current file" }
 )
-vim.api.nvim_set_keymap('n', '<leader>Mg',
-  '<cmd>CMakeGenerate<CR>',
-  { noremap = true, silent = true, desc = "Generate C/C++ makefile" })
-vim.api.nvim_set_keymap('n', '<leader>Mb',
-  '<cmd>CMakeBuild<CR>',
-  { noremap = true, silent = true, desc = "Build from C/C++ makefile" })
-vim.api.nvim_set_keymap('n', '<leader>Mr',
-  '<cmd>CMakeRun<CR>',
-  { noremap = true, silent = true, desc = "Run from C/C++ makefile" })
-vim.api.nvim_set_keymap('n', '<leader>Ms',
-  '<cmd>CMakeSettings<CR>',
-  { noremap = true, silent = true, desc = "Edit C/C++ makefile" })
 
 vim.keymap.set('n', '<leader>fW', function()
   path = ((require("neo-tree.sources.manager").get_state("filesystem").path))
