@@ -3,4 +3,11 @@
 -- Add any additional autocmds here
 --
 -- set current buffer as working dir (idk why this is not default??)
-vim.cmd [[autocmd BufEnter * silent! lcd %:p:h]]
+-- vim.cmd [[autocmd BufEnter * silent! lcd %:p:h]]
+
+--function Set_root_to_neo_tree()
+--local state = require("neo-tree.sources.manager").get_state("filesystem")
+--  vim.cmd("lcd " .. state.path)
+--end
+--vim.cmd [[autocmd BufEnter * silent! lua Set_root_to_neo_tree()]]
+-- print(require("neo-tree.sources.manager").get_state("filesystem").path)
