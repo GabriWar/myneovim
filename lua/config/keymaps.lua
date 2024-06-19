@@ -25,3 +25,6 @@ vim.api.nvim_set_keymap(
   '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>',
   { noremap = true, silent = true, desc = "Search on current file" }
 )
+vim.api.nvim_set_keymap('n', '<leader>dA',
+  '<cmd>! gcc % -o %<CR>',
+  { noremap = true, silent = true, desc = "Simple compile C/C++ file" })
