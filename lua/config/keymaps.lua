@@ -20,14 +20,18 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true, desc = "TreeSitter Info (use TSInstall)" }
 )
 vim.api.nvim_set_keymap(
-  'n',
-  '<leader>srr',
+  "n",
+  "<leader>srr",
   '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>',
   { noremap = true, silent = true, desc = "Search on current file" }
 )
 
-vim.keymap.set('n', '<leader>fW', function()
-  path = ((require("neo-tree.sources.manager").get_state("filesystem").path))
+vim.keymap.set("n", "<leader>fWW", function()
+  path = require("neo-tree.sources.manager").get_state("filesystem").path
   vim.cmd(":cd" .. path)
   vim.cmd(":echo 'Changed directory to " .. path .. "'")
-end,{ noremap = true, silent = true, desc = "Change current working dir to neo-tree root dir" })
+end, { noremap = true, silent = true, desc = "Change current working dir to neo-tree root dir" })
+vim.keymap.set("n", "<leader>fW", function()
+  vim.cmd("lcd %:p:h")
+  vim.cmd(":echo 'Changed directory to " .. vim.fn.expand("%:p:h") .. "'")
+end, { noremap = true, silent = true, desc = "Change working dir to buffer dir" })
