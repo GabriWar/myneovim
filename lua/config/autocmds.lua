@@ -11,3 +11,8 @@
 --end
 --vim.cmd [[autocmd BufEnter * silent! lua Set_root_to_neo_tree()]]
 -- print(require("neo-tree.sources.manager").get_state("filesystem").path)
+function printCWDir()
+  vim.notify(vim.fn.getcwd(), nil, { title = "Curent working directory:" })
+end
+vim.cmd([[autocmd DirChanged * lua printCWDir()]])
+--execute screenkey when entering when start (someday)
