@@ -28,11 +28,6 @@ return {
         name = "personal",
         path = "~/Obsidian/",
       },
-      {
-        name = "things",
-        path = "~/Obsidian/Things/",
-        },
-      },
     },
 
     -- Alternatively - and for backwards compatibility - you can set 'dir' to a single path instead of
