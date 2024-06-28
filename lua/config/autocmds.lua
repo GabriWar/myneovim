@@ -5,10 +5,10 @@
 -- set current buffer as working dir (idk why this is not default??)
 -- vim.cmd [[autocmd BufEnter * silent! lcd %:p:h]]
 
---function Set_root_to_neo_tree()
---local state = require("neo-tree.sources.manager").get_state("filesystem")
---  vim.cmd("lcd " .. state.path)
---end
+function Set_root_to_neo_tree()
+  local state = require("neo-tree.sources.manager").get_state("filesystem")
+  vim.cmd("lcd " .. state.path)
+end
 --vim.cmd [[autocmd BufEnter * silent! lua Set_root_to_neo_tree()]]
 -- print(require("neo-tree.sources.manager").get_state("filesystem").path)
 function printCWDir()
@@ -16,3 +16,8 @@ function printCWDir()
 end
 vim.cmd([[autocmd DirChanged * lua printCWDir()]])
 --execute screenkey when entering when start (someday)
+function set_current_buffer_dir()
+  local bufname = vim.fn.expand("%:p:h")
+  vim.cmd("lcd " .. bufname)
+  vim.notify("Current working directory: " .. bufname, nil, { title = "Curent working directory:" })
+end

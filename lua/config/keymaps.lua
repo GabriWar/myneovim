@@ -19,13 +19,14 @@ vim.api.nvim_set_keymap(
   "<cmd>TSInstallInfo<CR>",
   { noremap = true, silent = true, desc = "TreeSitter Info (use TSInstall)" }
 )
-vim.api.nvim_set_keymap(
-  "n",
-  "<leader>srr",
-  '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>',
-  { noremap = true, silent = true, desc = "Search on current file" }
-)
-
+vim.keymap.set("n", "<leader>srr", function()
+  vim.cmd("lcd %:p:h")
+  require("spectre").open_file_search({ select_word = true })
+end, { noremap = true, silent = true, desc = "Search and replace on current file" })
+vim.keymap.set("n", "<leader>srd", function()
+  vim.cmd("lcd %:p:h")
+  require("spectre").open_visual({ select_word = true })
+end, { noremap = true, silent = true, desc = "Search and replace on current dir" })
 vim.keymap.set("n", "<leader>mr", function()
   path = require("neo-tree.sources.manager").get_state("filesystem").path
   vim.cmd(":cd" .. path)
