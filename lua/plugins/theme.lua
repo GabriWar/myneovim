@@ -84,6 +84,7 @@ return {
 
       theme = {
         highlights = {
+          Visual = { bg = "#5800df" },
           Constant = { fg = "#ff00ff" },
         },
       },
