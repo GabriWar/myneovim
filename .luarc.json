@@ -1,6 +1,8 @@
 {
     "diagnostics.globals": [
         "set_current_buffer_dir",
-        "printCWDir"
+        "printCWDir",
+        "path",
+        "bufname"
     ]
 }
