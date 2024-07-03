@@ -6,5 +6,8 @@ return {
     table.insert(opts.sources, { name = "emoji" })
     table.insert(opts.sources, { name = "copilot" })
     table.insert(opts.sources, { name = "calc" })
+    table.insert(opts.sources, { name = "path" })
+    table.insert(opts.sources, { name = "buffer" })
+    table.insert(opts.sources, { name = "nvim_lsp" })
   end,
 }

@@ -74,7 +74,7 @@ end, { noremap = true, silent = true, desc = "Open nvim Dashboard" })
 --Open nvim Dashboard
 
 vim.keymap.set("n", "<leader>mG", function()
-  vim.cmd("!g++ -g -Wall -Wextra  -gdwarf-4 % -o tmp")
+  vim.cmd("!gcc -g -Wall -Wextra  -gdwarf-4 % -o tmp")
 end, { noremap = true, silent = true, desc = "Compile C/C++ file with debug flags" })
 
 --Compile C/C++ file with debug flags
@@ -87,7 +87,7 @@ end, { noremap = true, silent = true, desc = "Live grep" })
 --Live grep
 
 vim.keymap.set("n", "<F4>", function()
-  vim.cmd("!g++ -g -Wall -Wextra  -gdwarf-4 % -o tmp")
+  vim.cmd("!gcc -g -Wall -Wextra  -gdwarf-4 % -o tmp")
 end, { noremap = true, silent = true, desc = "Compile C/C++ with gcc debug flags" })
 
 --Compile C/C++ with gcc debug flags
