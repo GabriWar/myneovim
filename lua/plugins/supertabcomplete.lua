@@ -15,7 +15,7 @@ return {
       ["<C-f>"] = cmp.mapping.scroll_docs(4),
       ["<C-Space>"] = cmp.mapping.complete(),
       ["<C-e>"] = cmp.mapping.abort(),
-      ["<S-Tab>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select
+      ["<Tab>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select
     }
   end,
 }
