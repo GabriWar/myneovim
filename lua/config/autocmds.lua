@@ -14,10 +14,15 @@ end
 function printCWDir()
   vim.notify(vim.fn.getcwd(), nil, { title = "Curent working directory:" })
 end
-vim.cmd([[autocmd DirChanged * lua printCWDir()]])
---execute screenkey when entering when start (someday)
 function set_current_buffer_dir()
   local bufname = vim.fn.expand("%:p:h")
   vim.cmd("lcd " .. bufname)
   vim.notify("Current working directory: " .. bufname, nil, { title = "Curent working directory:" })
 end
+vim.api.nvim_create_autocmd({ "DirChanged" }, {
+  pattern = { "*" },
+  callback = function()
+    printCWDir()
+  end,
+})
+vim.cmd("Screenkey")
