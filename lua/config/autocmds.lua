@@ -25,4 +25,5 @@ vim.api.nvim_create_autocmd({ "DirChanged" }, {
     printCWDir()
   end,
 })
-vim.cmd("Screenkey")
+
+--vim.cmd("Screenkey")
