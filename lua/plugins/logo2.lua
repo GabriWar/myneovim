@@ -1,23 +1,20 @@
 return {
-  "nvimdev/dashboard-nvim",
-  lazy = false,
-  opts = function()
-    local logo = [[
+  "snacks.nvim",
+  opts = {
+    dashboard = {
+      preset = {
+        pick = function(cmd, opts)
+          return LazyVim.pick(cmd, opts)()
+        end,
+        header = [[
  ▄▀▀▀▀▄    ▄▀▀█▄   ▄▀▀█▄▄   ▄▀▀▄▀▀▀▄  ▄▀▀█▀▄   ▄▀▀▄    ▄▀▀▄  ▄▀▀█▄   ▄▀▀▄▀▀▀▄ 
 █         ▐ ▄▀ ▀▄ ▐ ▄▀   █ █   █   █ █   █  █ █   █    ▐  █ ▐ ▄▀ ▀▄ █   █   █ 
 █    ▀▄▄    █▄▄▄█   █▄▄▄▀  ▐  █▀▀█▀  ▐   █  ▐ ▐  █        █   █▄▄▄█ ▐  █▀▀█▀  
 █     █ █  ▄▀   █   █   █   ▄▀    █      █      █   ▄    █   ▄▀   █  ▄▀    █  
 ▐▀▄▄▄▄▀ ▐ █   ▄▀   ▄▀▄▄▄▀  █     █    ▄▀▀▀▀▀▄    ▀▄▀ ▀▄ ▄▀  █   ▄▀  █     █   
 ▐         ▐   ▐   █    ▐   ▐     ▐   █       █         ▀    ▐   ▐   ▐     ▐   
-                  ▐                  ▐       ▐                                
-
- 
-   ]]
-
-    return {
-      config = {
-        header = vim.split(logo, "\n"),
+]],
       },
-    }
-  end,
+    },
+  },
 }
