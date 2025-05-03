@@ -20,25 +20,29 @@ vim.api.nvim_set_keymap(
   "<cmd>TSInstallInfo<CR>",
   { noremap = true, silent = true, desc = "TreeSitter Info (use TSInstall)" }
 )
-
-vim.keymap.set("n", "<C-x>", function()
-  path = require("neo-tree.sources.manager").get_state("filesystem").path
-  vim.cmd(":cd" .. path)
-end, { noremap = true, silent = true, desc = "Change current working dir to neo-tree root dir" })
-
---Change current working dir to neo-tree root dir
-
+-- Change current working dir to Snacks explorer directory
 vim.keymap.set("n", "<leader>mr", function()
-  path = require("neo-tree.sources.manager").get_state("filesystem").path
-  vim.cmd(":cd" .. path)
-end, { noremap = true, silent = true, desc = "Change current working dir to neo-tree root dir" })
+  local Snacks = require("snacks")
+  local picker = Snacks.picker.current
 
---Change current working dir to neo-tree root dir
+  if picker and picker.opts and picker.opts.source == "explorer" then
+    local cwd = picker.opts.cwd or vim.fn.getcwd()
+    vim.cmd("cd " .. cwd)
+  end
+end, { noremap = true, silent = true, desc = "Change current working dir to explorer root dir" })
 
+-- Change working dir to buffer dir
 vim.keymap.set("n", "<leader>mw", function()
+  -- Change local working directory to buffer's directory
   vim.cmd("lcd %:p:h")
 
-  path = require("neo-tree.sources.manager").get_state("filesystem").path
+  -- Refresh Snacks Explorer if it's open
+  local Snacks = require("snacks")
+  if Snacks and Snacks.explorer and type(Snacks.explorer) == "function" then
+    pcall(function()
+      Snacks.explorer({ refresh = true })
+    end)
+  end
 end, { noremap = true, silent = true, desc = "Change working dir to buffer dir" })
 
 --Change working dir to buffer dir
